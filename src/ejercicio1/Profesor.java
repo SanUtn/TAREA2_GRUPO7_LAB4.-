@@ -10,10 +10,12 @@ public class Profesor extends Empleado {
 	//CONSTRUCTORES
 	public Profesor() {
 		super();
+		this.cargo = "sin cargo";
+		this.antiguedadDocente = 0;
 	}
 	
-	public Profesor ( String cargo, int antiguedadDocente ) {
-		super();
+	public Profesor ( String nombre, int edad, String cargo, int antiguedadDocente ) {
+		super(nombre, edad);
 		this.cargo = cargo;
 		this.antiguedadDocente = antiguedadDocente;
 	}
