@@ -1,6 +1,6 @@
 package ejercicio1;
 
-public class Empleado {
+public class Empleado implements Comparable<Empleado> {
 	
 		
 		//ATRIBUTOS DEL OBJETO
@@ -54,6 +54,18 @@ public class Empleado {
 		@Override
 		public String toString() {
 			return "El empleado " + nombre + " tiene " + edad + " años y su ID es el número " + id + ".";
+		}
+
+		@Override
+		public int compareTo(Empleado o) {
+			// Ordenamiento por ID de > a >
+			if(o.id == this.id) {
+				return 0;
+			}
+			if(o.id < this.id) {
+				return -1;
+			}
+			return 1;
 		}
 }
 
