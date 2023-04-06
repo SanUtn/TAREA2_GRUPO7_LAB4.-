@@ -40,6 +40,34 @@ public class Profesor extends Empleado {
 	     return "El ID del profesor es "+getId() + ", Se llama "+getNombre() + ", tiene "+getEdad() + " años, su cargo es "+getCargo()+ " y su antiguedad es de "+getAntiguedadDocente() +  " años.";
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + antiguedadDocente;
+		result = prime * result + ((cargo == null) ? 0 : cargo.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Profesor other = (Profesor) obj;
+		if (antiguedadDocente != other.antiguedadDocente)
+			return false;
+		if (cargo == null) {
+			if (other.cargo != null)
+				return false;
+		} else if (!cargo.equals(other.cargo))
+			return false;
+		return true;
+	}
+	
 	
 	
 }
