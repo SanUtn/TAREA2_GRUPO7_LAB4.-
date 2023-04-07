@@ -58,7 +58,7 @@ public class Empleado implements Comparable<Empleado> {
 
 		@Override
 		public int compareTo(Empleado o) {
-			// Ordenamiento por ID de > a >
+			// Ordenamiento por ID de < a <
 			if(o.id == this.id) {
 				return 0;
 			}

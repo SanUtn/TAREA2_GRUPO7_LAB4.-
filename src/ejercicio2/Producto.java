@@ -1,6 +1,6 @@
 package ejercicio2;
 
-public class Producto {
+public abstract class Producto  {
 	
 	//Atributos
 	private String nombre;
@@ -49,6 +49,8 @@ public class Producto {
 	public String toString() {
 		return "El producto "+ getNombre() +" tiene fecha de caducidad: " + getFechaCaducidad() + ", Numero de lote: " + getNumeroLote() + ".";
 	}
+
+
 
 
 
