@@ -5,10 +5,13 @@ public class Polideportivo extends Edificio implements InstalacionDeportiva {
 	private String nombre;
 	private int tipoDeInstalacion;
 	
-	Polideportivo(){
-		
+	public Polideportivo(){
+		super();
+		nombre ="Sin nombre";
+		tipoDeInstalacion = 0;
 	}
-	Polideportivo(double superficie, String nombre, int Tipo){
+	
+	public Polideportivo(double superficie, String nombre, int Tipo){
 		super(superficie);
 	    this.nombre=nombre;
 	    this.tipoDeInstalacion=Tipo;	    
@@ -28,7 +31,7 @@ public class Polideportivo extends Edificio implements InstalacionDeportiva {
 	}
 	@Override
 	public String toString() {
-		return "Polideportivo se llama" + nombre + "y tiene una superficie de " + this.getSuperficieEdificio() + " metros cuadrados";
+		return "Polideportivo se llama " + nombre + " y tiene una superficie de " + this.getSuperficieEdificio() + " metros cuadrados";
 	}
 	
 }

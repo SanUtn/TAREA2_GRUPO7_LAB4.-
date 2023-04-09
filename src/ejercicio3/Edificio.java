@@ -6,11 +6,11 @@ public class Edificio {
 	private double superficie;
 	
 	//CONSTRUCTORES	
-	Edificio(){
-		
+	public Edificio(){
+		superficie = 0;
 	}
 	
-	Edificio(double superficie){
+	public Edificio(double superficie){
 		this.superficie=superficie;
 	}
 

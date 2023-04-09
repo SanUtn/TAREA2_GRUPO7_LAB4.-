@@ -4,12 +4,12 @@ public class Oficina extends Edificio {
 	
 	private int cantOfi;
 	
-	Oficina(){
-		super():
-	    cantOfi=0;
+	public Oficina(){
+		super();
+	    cantOfi = 0;
 	}
   
-	Oficina(int cantOfi, double superficie){
+	public Oficina(int cantOfi, double superficie){
 		super(superficie);
 		this.cantOfi= cantOfi;
 	}
